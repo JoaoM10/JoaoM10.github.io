@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Sample Post
+title: First Post
 excerpt: "I will write about algorithms, data structures, number theory and security."
 categories: articles
-tags: [sample-post]
+tags: [introduction]
 comments: true
 ---
 
