@@ -5,7 +5,7 @@ author: Joao Ramos
 email: joao.ramos@dcc.fc.up.pt
 description: "Joao Ramos - Personal Blog"
 keywords: "Joao Ramos, Blog"
-baseurl: "/"
+baseurl: ""
 url: "http://joaoramos.me"
 locale: en_US
 
