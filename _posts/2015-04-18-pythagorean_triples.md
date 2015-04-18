@@ -1,9 +1,3 @@
-<style type="text/css">
-	.MathJax_Display {
-		display: inline !important;
-	}
-</style>
-
 ---
 layout: post
 title: Counting Pythagorean Triples in $$Z_n$$
