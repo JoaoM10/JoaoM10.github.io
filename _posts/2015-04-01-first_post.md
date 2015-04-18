@@ -1,19 +1,16 @@
 ---
 layout: post
 title: First Post
-excerpt: "I will write about algorithms, data structures, number theory and security."
-categories: articles
+excerpt: "A small introduction."
+categories: introduction
 tags: [introduction]
 comments: true
 ---
 
-* Table of Contents
-{:toc}
 
+Hi everyone,
 
-I will use my personal blog to write about algorithms and data structures, not only
-"tutorial" articles but mostly editorials for some problems I find especially interesting.
+I will use this personal blog to write about algorithms, data structures, number theory and probably security too.
+Most of the posts will walk through solutions I have found to problems I consider very interesting. But, ocasionally, I may write some tutorial like posts.
 
-As other of my hobbies is security, you will be able to find here some CTF write-up's.
-
-And finally, do not be surprised if I write about number theory too.
+Hope you enjoy it!
