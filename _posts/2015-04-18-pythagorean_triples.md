@@ -2,7 +2,7 @@
 layout: post
 title: Counting Pythagorean Triples in Z_n
 excerpt: "An algorithmic number theory approach to the problem of counting Pythagorean triples modulo n."
-categories: articles, number-theory
+categories: articles number-theory
 tags: [pythagorean-triples]
 comments: true
 ---
