@@ -35,9 +35,9 @@ Because $$a \in Z_{p^k}^*$$ we obtain:<br>
 <span style="display:inline-block; width: 42px;"></span>$$(\frac{a}{a})^2 + (\frac{b}{a})^2 \equiv (\frac{c}{a})^2$$ (mod $$p^k$$)<br>
 By using $$X = \frac{b}{a}$$ and $$Y = \frac{c}{a}$$ we get:<br>
 <span style="display:inline-block; width: 42px;"></span>$$1 + X^2 \equiv Y^2$$ (mod $$p^k$$)<br>
-And we get the number of solutions with $$a \in Z_{p^k}^*$$:<br>
 <br>
-$$\sum_{i=0}^{p^k - 1} qr(i) * qr((i + 1) \% p^k) * (p^k - p^{k - 1})$$
+And we get the number of solutions with $$a \in Z_{p^k}^*$$:<br>
+$$\sum_{i=0}^{p^k - 1} qr(i) * qr((i + 1) \% p^k) * (p^k - p^{k - 1})$$<br>
 <br>
 Note that $$i$$ represents $$X^2$$ (and $$i + 1$$ represents $$Y^2$$) and we need to multiply by $$(p^k - p^{k - 1})$$ which are the number of possibilities to $$a$$.
 <br>
@@ -50,9 +50,9 @@ Because $$b \in Z_{p^k}^*$$ we obtain:<br>
 <span style="display:inline-block; width: 42px;"></span>$$(\frac{a}{b})^2 + (\frac{b}{b})^2 \equiv (\frac{c}{b})^2$$ (mod $$p^k$$)<br>
 By using $$X = \frac{a}{b}$$ and $$Y = \frac{c}{b}$$ we get:<br>
 <span style="display:inline-block; width: 42px;"></span>$$X^2 + 1 \equiv Y^2$$ (mod $$p^k$$)<br>
-And we get the number of solutions with $$a \notin Z_{p^k}^*, b \in Z_{p^k}^*$$:<br>
 <br>
-$$\sum_{i=0}^{p^{k - 1} - 1} qr(p * i) * qr((p * i + 1) \% p^k) * (p^k - p^{k - 1})$$
+And we get the number of solutions with $$a \notin Z_{p^k}^*, b \in Z_{p^k}^*$$:<br>
+$$\sum_{i=0}^{p^{k - 1} - 1} qr(p * i) * qr((p * i + 1) \% p^k) * (p^k - p^{k - 1})$$<br>
 <br>
 Note that $$p*i$$ represents $$X^2$$ (and $$p*i + 1$$ represents $$Y^2$$) and we need to multiply by $$(p^k - p^{k - 1})$$ which are the number of possibilities to $$b$$.
 <br>
@@ -76,9 +76,9 @@ We now prove that $$a, b, c$$ is a solution in $$Z_{p^k}$$ if and only if $$\alp
 <span style="display:inline-block; width: 42px;"></span>$$\Leftrightarrow (\alpha * p^{k - 2} + \alpha')^2 + (\beta * p^{k - 2} + \beta')^2 - (\delta * p^{k - 2} + \delta')^2 \equiv 0$$ (mod $$p^{k - 2}$$)<br>
 <span style="display:inline-block; width: 42px;"></span>$$\Leftrightarrow \alpha'^2 + \beta'^2 - \delta'^2 \equiv 0$$ (mod $$p^{k - 2}$$)<br>
 <span style="display:inline-block; width: 42px;"></span>$$\Leftrightarrow \alpha'^2 + \beta'^2 \equiv \delta'^2$$ (mod $$p^{k - 2}$$)<br>
-And we get the number of solutions with $$a,b,c \notin Z_{p^k}^*$$:<br>
 <br>
-$$F(p^{k - 2}) * p^3$$
+And we get the number of solutions with $$a,b,c \notin Z_{p^k}^*$$:<br>
+$$F(p^{k - 2}) * p^3$$<br>
 <br>
 We are not done yet since the base cases are missing. We have $$F(p) = p^2$$ by Jacobi Sums (consult [1] for a proof of this) and $$F(p^0) = F(1) = 1$$ which is the trivial solution only.
 <br>
