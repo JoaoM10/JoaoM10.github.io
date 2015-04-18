@@ -11,6 +11,7 @@ comments: true
 
 To count the number of pythagorean triples in $$Z_n$$ we start by reducing this problem to the problem of counting pythagorean triples in $$Z_{p^k}$$, for some primes $$p$$ and positive integer $$k$$.
 Lets start by define $F(n)$ as the number of solutions to the equation:
+<br>
 	$$a^2 + b^2 \equiv c^2$$ (mod $$n$$)
 <br>
 <br>
@@ -19,6 +20,7 @@ Lets start by define $F(n)$ as the number of solutions to the equation:
 <br>
 To reduce our problem to the same one but in $$Z_{p^k}$$ we can apply the Chinese Remainder Theorem.
 Let $$n = p_1^{e_1}...p_r^{e_r}$$ be the prime decomposition of $$n$$, with $$p_i \ne p_j \forall i, j$$. We have:
+<br>
 	$$F(n) = \prod_{i=1}^r F(p_i^{e_i})$$
 <br>
 <br>
@@ -31,14 +33,14 @@ To count the pythagorean triples in $$Z_{p^k}$$ we will procede using case analy
 
 ### Case #1: $$a \in Z_{p^k}^*$$
 <br>
-We start with:
-	$$a^2 + b^2 \equiv c^2$$ (mod $$p^k$$)
-Because $$a \in Z_{p^k}^*$$ we obtain:
-	$$(\frac{a}{a})^2 + (\frac{b}{a})^2 \equiv (\frac{c}{a})^2$$ (mod $$p^k$$)
-By using $$X = \frac{b}{a}$$ and $$Y = \frac{c}{a}$$ we get:
-	$$1 + X^2 \equiv Y^2$$ (mod $$p^k$$)
-And we get the number of solutions with $$a \in Z_{p^k}^*$$:
-	$$\sum_{i=0}^{p^k - 1} qr(i) * qr((i + 1) \% p^k) * (p^k - p^{k - 1})$$
+We start with:<br>
+	$$a^2 + b^2 \equiv c^2$$ (mod $$p^k$$)<br>
+Because $$a \in Z_{p^k}^*$$ we obtain:<br>
+	$$(\frac{a}{a})^2 + (\frac{b}{a})^2 \equiv (\frac{c}{a})^2$$ (mod $$p^k$$)<br>
+By using $$X = \frac{b}{a}$$ and $$Y = \frac{c}{a}$$ we get:<br>
+	$$1 + X^2 \equiv Y^2$$ (mod $$p^k$$)<br>
+And we get the number of solutions with $$a \in Z_{p^k}^*$$:<br>
+	$$\sum_{i=0}^{p^k - 1} qr(i) * qr((i + 1) \% p^k) * (p^k - p^{k - 1})$$<br>
 <br>
 Note that $$i$$ represents $$X^2$$ (and $$i + 1$$ represents $$Y^2$$) and we need to multiply by $$(p^k - p^{k - 1})$$ which are the number of possibilities to $$a$$.
 <br>
