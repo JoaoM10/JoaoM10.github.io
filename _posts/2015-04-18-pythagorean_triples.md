@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Counting Pythagorean Triples modulo n
+title: Counting Pythagorean Triples in $$Z_n$$
 excerpt: "An algorithmic number theory approach to the problem of counting Pythagorean triples modulo n."
 categories: articles, number theory
 tags: [sample-post]
@@ -22,13 +22,13 @@ Let $$n = p_1^{e_1}...p_r^{e_r}$$ be the prime decomposition of $$n$$, with $$p_
 	$$F(n) = \prod_{i=1}^r F(p_i^{e_i})$$
 <br>
 <br>
-<br>
+
 ### Counting in $$Z_{p^k}$$
 <br>
 To count the pythagorean triples in $$Z_{p^k}$$ we will procede using case analysis. Lets start by define $$qr(i)$$ as the number of quadratic residues congruent to $$i$$ modulo $$p^k$$.
 <br>
 <br>
-<br>
+
 ### Case #1: $$a \in Z_{p^k}^*$$
 <br>
 We start with:
@@ -43,7 +43,7 @@ And we get the number of solutions with $$a \in Z_{p^k}^*$$:
 Note that $$i$$ represents $$X^2$$ (and $$i + 1$$ represents $$Y^2$$) and we need to multiply by $$(p^k - p^{k - 1})$$ which are the number of possibilities to $$a$$.
 <br>
 <br>
-<br>
+
 ### Case #2: $$a \notin Z_{p^k}^*, b \in Z_{p^k}^*$$
 <br>
 We start with:
@@ -58,13 +58,13 @@ And we get the number of solutions with $$a \notin Z_{p^k}^*, b \in Z_{p^k}^*$$:
 Note that $$p*i$$ represents $$X^2$$ (and $$p*i + 1$$ represents $$Y^2$$) and we need to multiply by $$(p^k - p^{k - 1})$$ which are the number of possibilities to $$b$$.
 <br>
 <br>
-<br>
+
 ### Case #3: $$a,b \notin Z_{p^k}^*, c \in Z_{p^k}^*$$
 <br>
 This is not actually a case since $$a,b \notin Z_{p^k}^*$$ imply $$c \notin Z_{p^k}^*$$.
 <br>
 <br>
-<br>
+
 ### Case #4: $$a,b,c \notin Z_{p^k}^*$$
 <br>
 Since $$a,b,c \notin Z_{p^k}^*$$ it implies that $$a = pa', b = pb', c = pc'$$. Also, we can write: $$a' = \alpha * p^{k - 2} + \alpha', b' = \beta * p^{k - 2} + \beta', c' = \delta * p^{k - 2} + \delta'$$.
@@ -85,7 +85,7 @@ And we get the number of solutions with $$a,b,c \notin Z_{p^k}^*$$:
 We are not done yet since the base cases are missing. We have $$F(p^1) = F(p) = p^2$$ by Jacobi Sums (consult [1] for a proof of this) and $$F(p^0) = F(1) = 1$$ which is the trivial solution only.
 <br>
 <br>
-<br>
+
 ### Result
 <br>
 After analyzing all cases we obtain:
@@ -95,7 +95,7 @@ $$F(p^k) = \sum_{i=0}^{p^k - 1} qr(i) * qr((i + 1) \% p^k) * (p^k - p^{k - 1})$$
 		$$ + \sum_{i=0}^{p^{k - 1} - 1} qr(p * i) * qr((p * i + 1) \% p^k) * (p^k - p^{k - 1}) + F(p^{k - 2}) * p^3$$
 <br>
 <br>
-<br>
+
 ### Complexity Analysis
 <br>
 Firstly, we need to consider the complexity to factorize $n$, which we need to reduce the problem from $$Z_n$$ to $$Z_{p^k}$$. It can be done in $$\mathcal{O}(\sqrt{n} * \log{}n)$$.
@@ -103,19 +103,19 @@ Then we consider the time to solve the problem in $$Z_{p^k}$$, which is $$\mathc
 So, we have a time complexity of $$\mathcal{O}(n)$$ and a space complexity of $$\mathcal{O}(n)$$ since we only need to pre-calculate $$qr$$.
 <br>
 <br>
-<br>
+
 ### Implementation
 <br>
 You can consult an implementarion in C++ on [2].
 <br>
 <br>
-<br>
+
 ### Conclusion
 <br>
 This paper shows an algorithmic number theory approach to a beautiful counting problem. Also, the method described is, as far as we know, the most efficient one (the approach using Discrete Fourier transform has linearithmic complexity).
 <br>
 <br>
-<br>
+
 ### References
 <br>
 [1] K. Ireland and M. Rosen, "A Classical Introduction to Modern Number Theory"
