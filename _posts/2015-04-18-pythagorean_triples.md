@@ -12,7 +12,7 @@ comments: true
 To count the number of pythagorean triples in $$Z_n$$ we start by reducing this problem to the problem of counting pythagorean triples in $$Z_{p^k}$$, for some primes $$p$$ and positive integer $$k$$.
 Lets start by define $F(n)$ as the number of solutions to the equation:
 <br>
-<span style="text-align: center;">$$a^2 + b^2 \equiv c^2$$ (mod $$n$$)</span>
+<div style="text-align: center;">$$a^2 + b^2 \equiv c^2$$ (mod $$n$$)</div>
 <br>
 <br>
 
@@ -20,7 +20,7 @@ Lets start by define $F(n)$ as the number of solutions to the equation:
 To reduce our problem to the same one but in $$Z_{p^k}$$ we can apply the Chinese Remainder Theorem.
 Let $$n = p_1^{e_1}...p_r^{e_r}$$ be the prime decomposition of $$n$$, with $$p_i \ne p_j \forall i, j$$. We have:
 <br>
-<span style="text-align: center;">$$F(n) = \prod_{i=1}^r F(p_i^{e_i})$$</span>
+<div style="text-align: center;">$$F(n) = \prod_{i=1}^r F(p_i^{e_i})$$</div>
 <br>
 <br>
 
@@ -37,7 +37,7 @@ Because $$a \in Z_{p^k}^*$$ we obtain:<br>
 By using $$X = \frac{b}{a}$$ and $$Y = \frac{c}{a}$$ we get:<br>
 <span style="display:inline-block; width: 42px;"></span>$$1 + X^2 \equiv Y^2$$ (mod $$p^k$$)<br>
 And we get the number of solutions with $$a \in Z_{p^k}^*$$:<br>
-<span style="display:inline-block; width: 42px;"></span>$$\sum_{i=0}^{p^k - 1} qr(i) * qr((i + 1) \% p^k) * (p^k - p^{k - 1})$$<br>
+<div style="text-align: center;">$$\sum_{i=0}^{p^k - 1} qr(i) * qr((i + 1) \% p^k) * (p^k - p^{k - 1})$$</div>
 <br>
 Note that $$i$$ represents $$X^2$$ (and $$i + 1$$ represents $$Y^2$$) and we need to multiply by $$(p^k - p^{k - 1})$$ which are the number of possibilities to $$a$$.
 <br>
@@ -51,7 +51,7 @@ Because $$b \in Z_{p^k}^*$$ we obtain:<br>
 By using $$X = \frac{a}{b}$$ and $$Y = \frac{c}{b}$$ we get:<br>
 <span style="display:inline-block; width: 42px;"></span>$$X^2 + 1 \equiv Y^2$$ (mod $$p^k$$)<br>
 And we get the number of solutions with $$a \notin Z_{p^k}^*, b \in Z_{p^k}^*$$:<br>
-<span style="display:inline-block; width: 42px;"></span>$$\sum_{i=0}^{p^{k - 1} - 1} qr(p * i) * qr((p * i + 1) \% p^k) * (p^k - p^{k - 1})$$<br>
+<div style="text-align: center;">$$\sum_{i=0}^{p^{k - 1} - 1} qr(p * i) * qr((p * i + 1) \% p^k) * (p^k - p^{k - 1})$$</div>
 <br>
 Note that $$p*i$$ represents $$X^2$$ (and $$p*i + 1$$ represents $$Y^2$$) and we need to multiply by $$(p^k - p^{k - 1})$$ which are the number of possibilities to $$b$$.
 <br>
@@ -76,7 +76,7 @@ We now prove that $$a, b, c$$ is a solution in $$Z_{p^k}$$ if and only if $$\alp
 <span style="display:inline-block; width: 42px;"></span>$$\Leftrightarrow \alpha'^2 + \beta'^2 - \delta'^2 \equiv 0$$ (mod $$p^{k - 2}$$)<br>
 <span style="display:inline-block; width: 42px;"></span>$$\Leftrightarrow \alpha'^2 + \beta'^2 \equiv \delta'^2$$ (mod $$p^{k - 2}$$)<br>
 And we get the number of solutions with $$a,b,c \notin Z_{p^k}^*$$:<br>
-<span style="display:inline-block; width: 42px;"></span>$$F(p^{k - 2}) * p^3$$<br>
+<div style="text-align: center;">$$F(p^{k - 2}) * p^3$$</div>
 <br>
 We are not done yet since the base cases are missing. We have $$F(p) = p^2$$ by Jacobi Sums (consult [1] for a proof of this) and $$F(p^0) = F(1) = 1$$ which is the trivial solution only.
 <br>
