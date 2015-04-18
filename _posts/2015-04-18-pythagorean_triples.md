@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Counting Pythagorean Triples in $$Z_n$$
+title: Counting Pythagorean Triples in Z_n
 excerpt: "An algorithmic number theory approach to the problem of counting Pythagorean triples modulo n."
 categories: articles, number theory
 tags: [pythagorean-triples]
@@ -89,7 +89,7 @@ After analyzing all cases we obtain:<br>
 $$F(p^0) = 1$$<br>
 $$F(p^1) = p^2$$<br>
 $$F(p^k) = \sum_{i=0}^{p^k - 1} qr(i) * qr((i + 1) \% p^k) * (p^k - p^{k - 1})$$
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$$ + \sum_{i=0}^{p^{k - 1} - 1} qr(p * i) * qr((p * i + 1) \% p^k) * (p^k - p^{k - 1}) + F(p^{k - 2}) * p^3$$
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$$ + \sum_{i=0}^{p^{k - 1} - 1} qr(p * i) * qr((p * i + 1) \% p^k) * (p^k - p^{k - 1}) + F(p^{k - 2}) * p^3$$
 <br>
 <br>
 
