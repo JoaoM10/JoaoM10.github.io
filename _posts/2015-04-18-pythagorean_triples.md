@@ -3,7 +3,7 @@ layout: post
 title: Counting Pythagorean Triples in $$Z_n$$
 excerpt: "An algorithmic number theory approach to the problem of counting Pythagorean triples modulo n."
 categories: articles, number theory
-tags: [sample-post]
+tags: [pythagorean-triples]
 comments: true
 ---
 
@@ -12,7 +12,7 @@ comments: true
 To count the number of pythagorean triples in $$Z_n$$ we start by reducing this problem to the problem of counting pythagorean triples in $$Z_{p^k}$$, for some primes $$p$$ and positive integer $$k$$.
 Lets start by define $F(n)$ as the number of solutions to the equation:
 <br>
-<div style="text-align: center;">$$a^2 + b^2 \equiv c^2$$ (mod $$n$$)</div>
+$$a^2 + b^2 \equiv c^2$$ (mod $$n$$){.centerit}
 <br>
 <br>
 
