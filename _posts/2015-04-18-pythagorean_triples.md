@@ -10,7 +10,7 @@ comments: true
 
 
 To count the number of pythagorean triples in $$Z_n$$ we start by reducing this problem to the problem of counting pythagorean triples in $$Z_{p^k}$$, for some primes $$p$$ and positive integer $$k$$.
-Lets start by define $F(n)$ as the number of solutions to the equation $$a^2 + b^2 \equiv c^2$$ (mod $$n$$).
+Lets start by define $$F(n)$$ as the number of solutions to the equation $$a^2 + b^2 \equiv c^2$$ (mod $$n$$).
 <br>
 <br>
 
