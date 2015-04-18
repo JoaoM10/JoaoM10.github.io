@@ -1,3 +1,9 @@
+<style type="text/css">
+	.MathJax_Display {
+		display: inline !important;
+	}
+</style>
+
 ---
 layout: post
 title: Counting Pythagorean Triples in $$Z_n$$
@@ -17,7 +23,6 @@ Lets start by define $F(n)$ as the number of solutions to the equation:
 <br>
 
 ### Reduction to $$Z_{p^k}$$
-<br>
 To reduce our problem to the same one but in $$Z_{p^k}$$ we can apply the Chinese Remainder Theorem.
 Let $$n = p_1^{e_1}...p_r^{e_r}$$ be the prime decomposition of $$n$$, with $$p_i \ne p_j \forall i, j$$. We have:
 <br>
@@ -25,21 +30,12 @@ Let $$n = p_1^{e_1}...p_r^{e_r}$$ be the prime decomposition of $$n$$, with $$p_
 <br>
 <br>
 
-<style type="text/css">
-	.MathJax_Display {
-		display: inline !important;
-	}
-</style>
-
-
 ### Counting in $$Z_{p^k}$$
-<br>
 To count the pythagorean triples in $$Z_{p^k}$$ we will procede using case analysis. Lets start by define $$qr(i)$$ as the number of quadratic residues congruent to $$i$$ modulo $$p^k$$.
 <br>
 <br>
 
 ### Case #1: $$a \in Z_{p^k}^*$$
-<br>
 We start with:<br>
     $$a^2 + b^2 \equiv c^2$$ (mod $$p^k$$)<br>
 Because $$a \in Z_{p^k}^*$$ we obtain:<br>
@@ -54,7 +50,6 @@ Note that $$i$$ represents $$X^2$$ (and $$i + 1$$ represents $$Y^2$$) and we nee
 <br>
 
 ### Case #2: $$a \notin Z_{p^k}^*, b \in Z_{p^k}^*$$
-<br>
 We start with:<br>
     $$a^2 + b^2 \equiv c^2$$ (mod $$p^k$$)<br>
 Because $$b \in Z_{p^k}^*$$ we obtain:<br>
@@ -69,13 +64,11 @@ Note that $$p*i$$ represents $$X^2$$ (and $$p*i + 1$$ represents $$Y^2$$) and we
 <br>
 
 ### Case #3: $$a,b \notin Z_{p^k}^*, c \in Z_{p^k}^*$$
-<br>
 This is not actually a case since $$a,b \notin Z_{p^k}^*$$ imply $$c \notin Z_{p^k}^*$$.
 <br>
 <br>
 
 ### Case #4: $$a,b,c \notin Z_{p^k}^*$$
-<br>
 Since $$a,b,c \notin Z_{p^k}^*$$ it implies that $$a = pa', b = pb', c = pc'$$. Also, we can write: $$a' = \alpha * p^{k - 2} + \alpha', b' = \beta * p^{k - 2} + \beta', c' = \delta * p^{k - 2} + \delta'$$.<br>
 We now prove that $$a, b, c$$ is a solution in $$Z_{p^k}$$ if and only if $$\alpha', \beta', \delta'$$ is a solution in $$Z_{p^{k - 2}}$$:<br>
     $$a^2 + b^2 \equiv c^2$$ (mod $$p^k$$)<br>
@@ -91,22 +84,19 @@ We now prove that $$a, b, c$$ is a solution in $$Z_{p^k}$$ if and only if $$\alp
 And we get the number of solutions with $$a,b,c \notin Z_{p^k}^*$$:<br>
     $$F(p^{k - 2}) * p^3$$<br>
 <br>
-We are not done yet since the base cases are missing. We have $$F(p^1) = F(p) = p^2$$ by Jacobi Sums (consult [1] for a proof of this) and $$F(p^0) = F(1) = 1$$ which is the trivial solution only.
+We are not done yet since the base cases are missing. We have $$F(p) = p^2$$ by Jacobi Sums (consult [1] for a proof of this) and $$F(p^0) = F(1) = 1$$ which is the trivial solution only.
 <br>
 <br>
 
 ### Result
-<br>
 After analyzing all cases we obtain:<br>
     $$F(p^0) = 1$$<br>
     $$F(p^1) = p^2$$<br>
-    $$F(p^k) = \sum_{i=0}^{p^k - 1} qr(i) * qr((i + 1) \% p^k) * (p^k - p^{k - 1})$$<br>
-		$$ + \sum_{i=0}^{p^{k - 1} - 1} qr(p * i) * qr((p * i + 1) \% p^k) * (p^k - p^{k - 1}) + F(p^{k - 2}) * p^3$$
+    $$F(p^k) = \sum_{i=0}^{p^k - 1} qr(i) * qr((i + 1) \% p^k) * (p^k - p^{k - 1}) + \sum_{i=0}^{p^{k - 1} - 1} qr(p * i) * qr((p * i + 1) \% p^k) * (p^k - p^{k - 1}) + F(p^{k - 2}) * p^3$$
 <br>
 <br>
 
 ### Complexity Analysis
-<br>
 Firstly, we need to consider the complexity to factorize $$n$$, which we need to reduce the problem from $$Z_n$$ to $$Z_{p^k}$$. It can be done in $$\mathcal{O}(\sqrt{n} * \log{}n)$$.
 Then we consider the time to solve the problem in $$Z_{p^k}$$, which is $$\mathcal{O}(n)$$.<br>
 So, we have a time complexity of $$\mathcal{O}(n)$$ and a space complexity of $$\mathcal{O}(n)$$ since we only need to pre-calculate $$qr$$.
@@ -114,19 +104,16 @@ So, we have a time complexity of $$\mathcal{O}(n)$$ and a space complexity of $$
 <br>
 
 ### Implementation
-<br>
 You can consult an implementarion in C++ on [2].
 <br>
 <br>
 
 ### Conclusion
-<br>
 This paper shows an algorithmic number theory approach to a beautiful counting problem. Also, the method described is, as far as we know, the most efficient one (the approach using Discrete Fourier transform has linearithmic complexity).
 <br>
 <br>
 
 ### References
-<br>
 [1] K. Ireland and M. Rosen, "A Classical Introduction to Modern Number Theory"
 [2] https://gist.github.com/JoaoM10/cf6337384f6ea653af2e
 
