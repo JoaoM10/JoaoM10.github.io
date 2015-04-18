@@ -12,7 +12,7 @@ comments: true
 To count the number of pythagorean triples in $$Z_n$$ we start by reducing this problem to the problem of counting pythagorean triples in $$Z_{p^k}$$, for some primes $$p$$ and positive integer $$k$$.
 Lets start by define $F(n)$ as the number of solutions to the equation:
 <br>
-<span style="display:inline-block; width: 42px;"></span>$$a^2 + b^2 \equiv c^2$$ (mod $$n$$)
+<span style="text-align: center;">$$a^2 + b^2 \equiv c^2$$ (mod $$n$$)</span>
 <br>
 <br>
 
@@ -20,7 +20,7 @@ Lets start by define $F(n)$ as the number of solutions to the equation:
 To reduce our problem to the same one but in $$Z_{p^k}$$ we can apply the Chinese Remainder Theorem.
 Let $$n = p_1^{e_1}...p_r^{e_r}$$ be the prime decomposition of $$n$$, with $$p_i \ne p_j \forall i, j$$. We have:
 <br>
-<span style="display:inline-block; width: 42px;"></span>$$F(n) = \prod_{i=1}^r F(p_i^{e_i})$$
+<span style="text-align: center;">$$F(n) = \prod_{i=1}^r F(p_i^{e_i})$$</span>
 <br>
 <br>
 
@@ -84,9 +84,10 @@ We are not done yet since the base cases are missing. We have $$F(p) = p^2$$ by 
 
 ### Result
 After analyzing all cases we obtain:<br>
-<span style="display:inline-block; width: 42px;"></span>$$F(p^0) = 1$$<br>
-<span style="display:inline-block; width: 42px;"></span>$$F(p^1) = p^2$$<br>
-<span style="display:inline-block; width: 42px;"></span>$$F(p^k) = \sum_{i=0}^{p^k - 1} qr(i) * qr((i + 1) \% p^k) * (p^k - p^{k - 1}) + \sum_{i=0}^{p^{k - 1} - 1} qr(p * i) * qr((p * i + 1) \% p^k) * (p^k - p^{k - 1}) + F(p^{k - 2}) * p^3$$
+$$F(p^0) = 1$$<br>
+$$F(p^1) = p^2$$<br>
+$$F(p^k) = \sum_{i=0}^{p^k - 1} qr(i) * qr((i + 1) \% p^k) * (p^k - p^{k - 1})$$<br>
+<span style="display:inline-block; width: 42px;"></span>$$ + \sum_{i=0}^{p^{k - 1} - 1} qr(p * i) * qr((p * i + 1) \% p^k) * (p^k - p^{k - 1}) + F(p^{k - 2}) * p^3$$
 <br>
 <br>
 
