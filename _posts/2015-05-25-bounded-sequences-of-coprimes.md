@@ -11,7 +11,6 @@ Today I'm writing about a conjecture I've working in the last months.
 Although I was not able to prove it yet, I will share it here with some
 parts that I've proved and some ideas I've tried.
 <br>
-<br>
 
 ### So what is this conjecture about?
 
@@ -23,11 +22,11 @@ with the second number, the second number is coprime with the third one,
 and so on.
 
 Now a more formal definition: Lets define $$f(a,b)$$, with $$a$$ and $$b$$
-positive integers and $$a < b$$, as:<br>
+positive integers and $$a < b$$, as:
+<br><br>
 $$f(a,b) = min \{ |\{x_1, ..., x_n\}| : \{x_1, ..., x_n\} \subset \mathbb{N} \wedge \\ a < x_1 < x_2 < ... < x_n < b \wedge  gcd(a, x_1) = gdc(x_1, x_2) = ... = gcd(x_n, b) = 1 \}$$<br>
 
 The conjecture is that: $$f(a,b) \leq 2$$ for all values $$a$$ and $$b$$.
-<br>
 <br>
 
 ### When $$b \geq 2*a$$
@@ -39,7 +38,6 @@ when $$a > 1$$. We have $$gcd(a,p) \leq 1$$. Now we can have two cases: $$gcd(p,
 insert $$b - 1$$ in our sequence, leading us to $$f(a,b) \leq 2$$. Note that
 if $$a = 1$$ then $$gcd(a,b) = 1$$ and $$f(a,b) = 0$$.
 <br>
-<br>
 
 ### When $$b < 2*a$$
 
@@ -49,7 +47,6 @@ able to give a proof, yet.
 I've proved that the conjecture is true manually (that is, each case individually)
 when $$b = a + d$$ with small $$d$$ but didn't find a way of generalize the proofs.
 Computationally, I have already proved the conjecture for $$a \leq 100 000$$.
-<br>
 <br>
 
 ### Final remarks
