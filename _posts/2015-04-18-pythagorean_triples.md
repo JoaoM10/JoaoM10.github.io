@@ -85,11 +85,12 @@ We are not done yet since the base cases are missing. We have $$F(p) = p^2$$ by 
 <br>
 
 ### Result
-After analyzing all cases we obtain:<br>
+Let $$n = p_1^{e_1}...p_r^{e_r}$$ be the prime decomposition of $$n$$, with $$p_i \ne p_j \forall i, j$$. After analyzing all cases we obtain:<br>
 $$F(p^0) = 1$$<br>
 $$F(p^1) = p^2$$<br>
 $$F(p^k) = \sum_{i=0}^{p^k - 1} qr(i) * qr((i + 1) \% p^k) * (p^k - p^{k - 1})$$
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$$ + \sum_{i=0}^{p^{k - 1} - 1} qr(p * i) * qr((p * i + 1) \% p^k) * (p^k - p^{k - 1}) + F(p^{k - 2}) * p^3$$
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$$ + \sum_{i=0}^{p^{k - 1} - 1} qr(p * i) * qr((p * i + 1) \% p^k) * (p^k - p^{k - 1}) + F(p^{k - 2}) * p^3$$<br>
+$$F(n) = \prod_{i=1}^r F(p_i^{e_i})$$
 <br>
 <br>
 
@@ -107,6 +108,7 @@ You can consult an implementarion in C++ on [2].
 
 ### Conclusion
 This paper shows an algorithmic number theory approach to a beautiful counting problem. Also, the method described is, as far as we know, the most efficient one (the approach using Discrete Fourier transform has linearithmic complexity).
+As a final note, it's easy to see that we can generate the pythagorean triples in $$Z_n$$ efficiently by reverse engineering of this method (I will add an implementation of it later when I get some free time).
 <br>
 <br>
 
