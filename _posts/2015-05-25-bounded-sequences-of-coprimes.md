@@ -13,6 +13,7 @@ parts that I've proved and some ideas I've tried.
 
 <br>
 <br>
+
 ###So what is this conjecture about?
 
 First an informal definition: Given two numbers $$a$$ and $$b$$ (both
@@ -31,6 +32,7 @@ The conjecture is that: $$f(a,b) \leq 2$$ for all values $$a$$ and $$b$$.
 
 <br>
 <br>
+
 ###When $$b \geq 2*a$$
 
 We can easily see that the conjecture is true when $$b \geq 2*a$$ because,
@@ -42,6 +44,7 @@ if $$a = 1$$ then $$gcd(a,b) = 1$$ and $$f(a,b) = 0$$.
 
 <br>
 <br>
+
 ###When $$b < 2*a$$
 
 Is this conjecture still true when $$b < 2*a$$? I do think so but I was not
@@ -53,6 +56,7 @@ Computationally, I have already proved the conjecture for $$a \leq 100 000$$.
 
 <br>
 <br>
+
 ###Final remarks
 
 If we believe that Oppermann's conjecture is true, then we can give a proof that
