@@ -24,7 +24,7 @@ and so on.
 Now a more formal definition: Lets define $$f(a,b)$$, with $$a$$ and $$b$$
 positive integers and $$a < b$$, as:
 <br><br>
-$$f(a,b) = min \{ |\{x_1, ..., x_n\}| : \{x_1, ..., x_n\} \subset \mathbb{N} \wedge \\ a < x_1 < x_2 < ... < x_n < b \wedge  gcd(a, x_1) = gdc(x_1, x_2) = ... = gcd(x_n, b) = 1 \}$$<br>
+$$f(a,b) = min \{ |\{x_1, ..., x_n\}| : \{x_1, ..., x_n\} \subset \mathbb{N} \wedge a < x_1 < x_2 < ... < x_n < b \\ \wedge gcd(a, x_1) = gdc(x_1, x_2) = ... = gcd(x_n, b) = 1 \}$$<br>
 
 The conjecture is that: $$f(a,b) \leq 2$$ for all values $$a$$ and $$b$$.
 <br>
