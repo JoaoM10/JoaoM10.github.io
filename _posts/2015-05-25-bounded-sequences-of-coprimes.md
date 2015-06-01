@@ -29,7 +29,7 @@ $$f(a,b) \\ = min \{ |\{x_1, ..., x_n\}| : \{x_1, ..., x_n\} \subset \mathbb{N} 
 The conjecture is that: $$f(a,b) \leq 2$$ for all values $$a$$ and $$b$$.
 <br><br>
 
-### Large gaps$$
+### Large gaps
 
 We can easily see that the conjecture is true when $$b \geq 2*a$$ because,
 by the Bertrand's postulate [1], exists a prime $$p$$ such that $$a < p < b$$
@@ -52,11 +52,11 @@ This result gives a proof to our conjecture when $$b \geq a + a/(2ln^2a)$$.
 Some years later, in 2010, Dusart proved that there exists a prime in the
 interval $$[n, n + n/(25ln^2n)]$$ for $$n \geq 396 738$$ [4], improving his
 previous result. Note again that it was verified computationally that the
-conjecture is true for all $$a \< 396 738$$.
+conjecture is true for all $$a < 396 738$$.
 
 We also have some other very interesting results like the work done by
 Baker, Harman, and Pintz, in 2001, which proved that the interval
-$$[n, n + n^0.525]$$ contains at least one prime number for sufficiently
+$$[n, n + n^{0.525}]$$ contains at least one prime number for sufficiently
 large $$n$$ [5]. 
 <br><br>
 
@@ -80,10 +80,9 @@ If you have any idea I would love to hear it!
 
 
 ### References
-[1] Manoj Verma, "A more elementary proof of Bertrand's postulate", arXiv:1401.4368 [math.NT], 2013
-[2] Nagura, J. “On The Interval Containing At Least One Prime Number” Proceedings of the Japan Academy. 28(4), 177–181, 1952
-[3] Dusart, Autour de la fonction qui compte
-le nombre de nombres premiers, PhD Thesis, Université de Limoges, 1998
-[4] Dusart, "Estimates of Some Functions Over Primes without R.H.", arXiv:1002.0442 [math.NT], 2010
-[5] Baker, R. C.; Harman, G.; Pintz, J. “The Difference Between Consecutive Primes, II” Proceedings of the London Mathematical Society. 83(3), 532–562, 2001
-[6] Paz, G. A. "On Legendre’s, Brocard’s, Andrica’s, and Oppermann’s Conjectures", arXiv:1310.1323v2 [math.NT], 2014
+[1] Manoj Verma, "A more elementary proof of Bertrand's postulate", arXiv:1401.4368 [math.NT], 2013<br>
+[2] Nagura, J. “On The Interval Containing At Least One Prime Number” Proceedings of the Japan Academy. 28(4), 177–181, 1952<br>
+[3] Dusart, Autour de la fonction qui compte le nombre de nombres premiers, PhD Thesis, Université de Limoges, 1998<br>
+[4] Dusart, "Estimates of Some Functions Over Primes without R.H.", arXiv:1002.0442 [math.NT], 2010<br>
+[5] Baker, R. C.; Harman, G.; Pintz, J. “The Difference Between Consecutive Primes, II” Proceedings of the London Mathematical Society. 83(3), 532–562, 2001<br>
+[6] Paz, G. A. "On Legendre’s, Brocard’s, Andrica’s, and Oppermann’s Conjectures", arXiv:1310.1323v2 [math.NT], 2014<br>
