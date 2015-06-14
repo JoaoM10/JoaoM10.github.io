@@ -7,7 +7,7 @@ tags: [bounded-sequences-coprimes]
 comments: true
 ---
 
-Today I'm writing about a conjecture I've working in the last months.
+Today I'm writing about a conjecture I've been working in the last months.
 Although I was not able to prove it yet, I will share it here with some
 parts that I've proved and some ideas I've tried.
 <br><br>
