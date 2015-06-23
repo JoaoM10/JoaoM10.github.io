@@ -32,7 +32,7 @@ The conjecture is that: $$f(a,b) \leq 2$$ for all values $$a$$ and $$b$$.
 ### Large gaps
 
 We can easily see that the conjecture is true when $$b \geq 2*a$$ because,
-by the Bertrand's postulate [1], exists a prime $$p$$ such that $$a < p < b$$
+by the Bertrand's postulate $$^{[1]}$$, exists a prime $$p$$ such that $$a < p < b$$
 when $$a > 1$$. We have $$gcd(a,p) \leq 1$$. Now we can have two cases:
 $$gcd(p,b) = 1$$ , which lead us to $$f(a,b) = 1$$; or $$gcd(p,b) = p$$
 and, in this case, we insert $$b - 1$$ in our sequence, leading us to
